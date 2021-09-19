@@ -41,8 +41,18 @@ tip = ourPurchaseObject.calculateTip(localTipPercent)
 # display some useful results
 print('Local Tax Percent: ', tax)
 print('Local Tip Percent: ', tip)
-print('Total Purchase in USD: ', ourPurchaseObject.calculateTotal(localTaxPercent, localTipPercent)) 
+print('Total Purchase in USD: $', ourPurchaseObject.calculateTotal(localTaxPercent, localTipPercent)) 
+
+# print using string interpolation and new fstrings
+# fstrings = formatted strings 
+# display values inline inside curly braces
+print(f'Total Purchase in USD: ${ ourPurchaseObject.calculateTotal(localTaxPercent, localTipPercent) }')
+
+# use fstrings to show only 2 digits on a floating point number (.2f)
+print(f'Total Purchase in USD: ${ ourPurchaseObject.calculateTotal(localTaxPercent, localTipPercent):.2f}')
 
 # References
 # Read more at: https://docs.python.org/3/tutorial/classes.html
+# string interpolation at: python string interpolation
+# Google python fstring to limit to 2 decimal places
 
